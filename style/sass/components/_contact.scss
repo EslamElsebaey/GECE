@@ -22,27 +22,12 @@
     .price-offer-ancor{
         background-color: #fff;
         color: #000;
-        // overflow: hidden;
-        // position: relative;
-        // &::before{
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     z-index: 2;
-        //     display: block;
-        //     content: '';
-        //     width: 0;
-        //     height: 0;
-        //     background: rgb(232, 68, 68  , .2);
-        //     border-radius: 100%;
-        //     transform: translate(-50%, -50%);
-        //     opacity: 0;
-        // }
-        // &:hover{
-        //         &::before{
-        //             animation: circle .75s;
-        //         }
-        // }
+        border: 2px solid transparent;
+        border-radius: 40px;
+        &:hover{
+          background-color: rgba($color: #fff, $alpha: .8);
+            
+        }
     }
     .contact-text{
         font-size: 24px;
