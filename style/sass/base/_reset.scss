@@ -1,0 +1,17 @@
+@include max-768{
+    html[dir="ltr"] nav {
+      clip-path: circle(11.2% at 86% 14%);
+    }
+    html[dir="ltr"] .reset-left {
+      clip-path: circle(122% at 86% 14%);
+    }
+
+}
+
+
+.logo-height{
+  height: 70px;
+}
+.pd-top-25{
+  padding-top: 25px;
+}
