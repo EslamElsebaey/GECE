@@ -13,16 +13,38 @@
     column-gap: 30px;
 }
 .service-item{
+    .sevice-item-img{
+        overflow: hidden;
+        img{
+            transition: all linear .2s;
+        }
+    }
+    &:hover{
+        .title{
+            color: $main-color;
+        }
+        .sevice-item-img {
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    > a{
+        display: block;
+        width: 100%;
+    }
     position: relative;
     .service-item-desc{
         padding: 30px;
         border: 1px solid #dfdfdf;
+        text-align: center;
     }
     .title{
         font-size: 16px;
+        transition: all linear .2s;
+        text-align: center;
         color: #000000;
         font-weight: 700;
-        text-align: center;
         margin-bottom: 10px;
     }
     .desc{

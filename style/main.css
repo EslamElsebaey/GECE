@@ -439,23 +439,33 @@ img {
   -webkit-border-end: 1px solid #334589;
           border-inline-end: 1px solid #334589;
 }
+.topheader-content .mail a {
+  transition: all linear 0.2s;
+}
+.topheader-content .mail:hover a {
+  color: #e84444;
+}
 .topheader-content .callus {
   -webkit-padding-end: 30px;
           padding-inline-end: 30px;
   -webkit-border-end: 1px solid #334589;
           border-inline-end: 1px solid #334589;
 }
-.topheader-content .callus > a {
-  font-size: 12px;
+.topheader-content .callus:hover span {
   color: #e84444;
-  font-weight: 300;
-  -webkit-margin-start: 5px;
-          margin-inline-start: 5px;
 }
 .topheader-content .callus span {
   font-size: 12px;
   color: #ffffff;
   font-weight: 300;
+  transition: all linear 0.2s;
+}
+.topheader-content .callus > .call-num {
+  font-size: 12px;
+  color: #e84444;
+  font-weight: 300;
+  -webkit-margin-start: 5px;
+          margin-inline-start: 5px;
 }
 .topheader-content .mail > a {
   font-size: 12px;
@@ -466,10 +476,14 @@ img {
   -webkit-padding-start: 30px;
           padding-inline-start: 30px;
 }
+.topheader-content .lang:hover a {
+  color: #e84444;
+}
 .topheader-content .lang > a {
   color: #6c7ec2;
   font-size: 12px;
   font-weight: 300;
+  transition: all linear 0.2s;
 }
 
 .reset-left {
@@ -505,11 +519,21 @@ img {
 }
 .callUs-btn:hover {
   color: #fff;
+  background-color: #04134c;
+  animation-name: contact-pulse2;
 }
 
 @keyframes contact-pulse {
   0% {
     box-shadow: 0 0 0 0 #e84444;
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(148, 95, 5, 0);
+  }
+}
+@keyframes contact-pulse2 {
+  0% {
+    box-shadow: 0 0 0 0 #04134c;
   }
   80% {
     box-shadow: 0 0 0 14px rgba(148, 95, 5, 0);
@@ -937,7 +961,10 @@ html[dir=ltr] .logo-text h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all linear 0.3s;
+  transition: all linear 0.2s;
+}
+.message .send:hover {
+  background-color: #04134c;
 }
 .message .send i {
   font-size: 18px;
@@ -1434,15 +1461,33 @@ footer .line {
 .service-item {
   position: relative;
 }
+.service-item .sevice-item-img {
+  overflow: hidden;
+}
+.service-item .sevice-item-img img {
+  transition: all linear 0.2s;
+}
+.service-item:hover .title {
+  color: #e84444;
+}
+.service-item:hover .sevice-item-img img {
+  transform: scale(1.1);
+}
+.service-item > a {
+  display: block;
+  width: 100%;
+}
 .service-item .service-item-desc {
   padding: 30px;
   border: 1px solid #dfdfdf;
+  text-align: center;
 }
 .service-item .title {
   font-size: 16px;
+  transition: all linear 0.2s;
+  text-align: center;
   color: #000000;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 10px;
 }
 .service-item .desc {
@@ -1899,7 +1944,8 @@ html[dir=ltr] .project-item .project-overlay .project-name {
   border-radius: 40px;
 }
 .contact-parent .price-offer-ancor:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #04134c;
+  color: #fff;
 }
 .contact-parent .contact-text {
   font-size: 24px;
