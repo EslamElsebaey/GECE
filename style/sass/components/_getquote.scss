@@ -1,0 +1,235 @@
+// bread crump 
+
+.breadcrumb-sec{
+     background-image: url(../../../images/get-quote/breadcrumb\ bg.png);
+    text-align: center;
+    color: #fff;
+    height: 220px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color: #04134c, $alpha: 0.702);
+        z-index: -1;
+    }
+}
+.page-head{
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.bread-crumb-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.item-home::after{
+    content: " / ";
+    padding: 0 5px;
+    color: #fff;
+}
+.breadcrumb-list{
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    align-items: center;
+   
+}
+.bread-link , .breadcrumb .active{
+font-size: 14px;
+line-height: 25px;
+color: #ffffff;
+font-weight: 300;
+text-align: center;
+transition: all linear .2s;
+}
+.bread-link{
+    &:hover{
+        text-decoration: none;
+        color: $main-color;
+    }
+}
+
+//end of  bread crump 
+
+
+
+// form
+.form-sec{
+    padding: 80px 0 145px 0;
+}
+
+.form-parent{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 0;
+}
+
+.logo-details{
+    padding: 100px 0;
+    background-color: #032194;
+   background-image: url(../../../images/get-quote/shape.png);
+   background-repeat: no-repeat;
+   background-position: -69% 240%;
+}
+.logo-details-cont{
+    text-align: center;
+    .logo-white{
+        height: 200px;
+        margin-bottom: 25px;
+    }
+    .text{
+        font-size: 24px;
+        line-height: 25px;
+        color: #ffffff;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 30px;
+        color: #ffffff;
+        font-weight: 300;
+        max-width: 439px;
+        margin: auto;
+    }
+}
+
+.form-div{
+    padding:  55px 30px ;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.1));
+    background-color: #ffffff;
+
+}
+.form-div-details{
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input , textarea {
+        width: 100%;
+        outline: none;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #ffffff;
+        border: 2px solid #f2f2f2;
+        padding: 10px 20px;
+        margin: 0 auto 20px auto;
+        display: block;
+        &::placeholder{
+            font-size: 14px;
+            color: #808080;
+            font-weight: 300;
+        }
+        &:focus{
+            border-color: #ffd1d1;
+        }
+    }
+    textarea{
+        height: 150px;
+        resize: none;
+    }
+    .submit-btn{
+        width: 180px;
+        text-transform: capitalize;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #e84444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #ffffff;
+        transition: all linear .2s;
+        font-weight: 700;
+        &:hover{
+            background-color: $second-color;
+        }
+    }
+}
+
+
+@include max-1200{
+    .logo-details{
+        background-position: -133% 240%;
+    }
+}
+
+@include max-992 {
+    .logo-details{
+        background-image: none;
+    }
+    .form-parent{
+        grid-template-columns: 1fr;
+    }
+    .form-div-details .submit-btn{
+        margin: auto;
+    }
+    .logo-details{
+        padding: 100px 20px;
+    }
+    .logo-details-cont p{
+        max-width: 90%;
+    }
+    .page-head{
+        font-size: 22px;
+    }
+    .breadcrumb-sec{
+       height: auto;
+        padding: 50px 0;
+    }
+}
+
+@include max-768 {
+    .logo-details-cont .logo-white{
+        height: 150px;
+    }
+    .logo-details-cont .text{
+        font-size: 17px;
+    }
+    .logo-details-cont p{
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .logo-details{
+        padding: 50px 10px;
+    }
+    .logo-details-cont .text{
+        margin-bottom: 15px;
+    }
+    .form-div{
+        padding: 50px 10px;
+    }
+    .form-div-details input::placeholder, .form-div-details textarea::placeholder{
+        font-size: 13px;
+    }
+    .form-div-details .submit-btn{
+        width: 170px;
+        height: 48px;
+    }
+    .form-sec{
+        padding: 50px 0 70px 0;
+    }
+    .page-head{
+        font-size: 16px;
+        margin-bottom:10px;
+    }
+    .breadcrumb-sec{
+        padding: 25px 20px;
+    }
+    .form-div-details input, .form-div-details textarea{
+        padding: 5px 15px;
+    }
+}

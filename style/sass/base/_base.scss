@@ -9,11 +9,7 @@ body{
   padding-top: 181px;
 }
 
-@media  (min-width : 992px) and (max-width : 1200px){
-  body{
-    padding-top: 155.21px;
-  }
-}
+
 
 @include max-992{
   body{
