@@ -105,6 +105,12 @@ transition: all linear .2s;
         margin: auto;
     }
 }
+html[dir="ltr"]{
+    .logo-details-cont p{
+        line-height: 1.6;
+    }
+    
+}
 
 .form-div{
     padding:  55px 30px ;
